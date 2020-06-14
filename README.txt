@@ -1,5 +1,5 @@
 
-# ptdi - parse/edit todo.txt  v1.0
+# ptodo - parse/edit todo.txt  v1.0
 
 A program to manage a todo.txt file from command line, or 
 interactively 
@@ -28,7 +28,7 @@ ToDo
 Command-line mode
 -----------------
 
-ptdi [OPTIONS] <todo.txt file>
+ptodo [OPTIONS] <todo.txt file>
 
    -a 'new task'   - backup + add task + write
                      (not compatible with -f)
