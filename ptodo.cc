@@ -1006,6 +1006,13 @@ void addTask(string o)
 
   string line = o.substr(2);
   
+  size_t pos=line.find("due:today");
+  if (pos != string::npos)
+  {
+    string ddate="due:"+today;
+    
+    line.replace(pos,9,ddate);
+  }
   createTaskFromLine(line);
   sortTasks(ordTasks,cst);
   writeFile(filename);
