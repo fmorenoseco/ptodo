@@ -536,6 +536,7 @@ bool checkFileNotModified()
   return f.st_mtime == infoFile.st_mtime;
 }
 
+// writes all tasks to file 'fn'
 void writeFile(string fn)
 {
   ofstream f;
@@ -554,6 +555,7 @@ void writeFile(string fn)
     getFileInfo(infoFile);   
 }
 
+// writes tasks in 'vt' to file 'fn'
 void writeFile(vector<Task *> vt,string fn)
 {
   ofstream f;

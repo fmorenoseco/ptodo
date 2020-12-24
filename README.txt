@@ -25,8 +25,22 @@ ToDo
    format, ...
 
 
-Command-line mode
------------------
+Introduction
+------------
+
+This program, ptodo, manages a todo.txt file with tasks (ToDo). It has two
+operating modes: batch and interactive. When the program is executed with
+only the todo file, it enters in the interactive mode; if there are more
+options, it executes in batch mode, useful for listings or adding tasks from
+command line.
+
+The program asumes that the todo file is correct. Some errors are detected,
+but the parsing is handmade and it's not exhaustive, it may not handle rare
+errors in the file.
+
+
+Command-line options
+--------------------
 
 ptodo [OPTIONS] <todo.txt file>
 
@@ -61,9 +75,10 @@ can change the format with -o option.
 Interactive mode
 ----------------
 
-In this mode, a task listing shows and then it reads and executes an order.
-If an order modifies the task list, it first checks file modification time
-(and, if modified, rereads it and aborts order), then executes the order, 
+The program executes in this mode when the only argument is the todo file.
+First, a task listing shows and then an order is read and executed.
+If an order modifies the task list, the program first checks file modification 
+time (and, if modified, rereads it and aborts order), then executes the order, 
 and finally writes the file.
 
 Orders are:
@@ -175,7 +190,7 @@ recurrent tasks (with 'r'). These tasks will be removed from the task list
 Backup
 ------
 
- In command-line mode, if it's not a filter operation, it will make a backup
+ In batch mode, if it's not a filter operation, it will make a backup
 of the todo.txt file. Also, when entering interactive mode a backup will be made
 (yes, even if you don't modify anything). The backup file will be:
 
@@ -189,9 +204,7 @@ for
 
   createBackup=false;
 
-in the 'main' function. This is one of the things to be soon included in a
-config file (see ToDo)
-
-
+in the 'main' function. This is one of the things to be included in a
+config file (see ToDo) some day
 
 

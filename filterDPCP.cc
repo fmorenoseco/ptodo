@@ -52,6 +52,10 @@ bool containsString(vector<string> v,string s)
   return false;
 }
 
+
+/*
+  DPCP = Date Priority Context Project
+*/
 bool filterTaskDPCP(const Task &t)
 {
   extern FilterDPCP fdpcp;

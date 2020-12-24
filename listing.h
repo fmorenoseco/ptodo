@@ -32,7 +32,7 @@ void showTaskORIG(ostream &os, const Task &t);
 // 
 void showAllTasks(vector<Task *> vt);
 
-// given a filter function, show tasks (w/o number) 
+// given a filter function, show tasks (w/o number) (yeah, a pointer to a function!)
 void showTasksFilter(vector<Task *> vt,bool (*fltTsk)(const Task &));
 void showTasksFilterNumbered(vector<Task *> vt,bool (*fltTsk)(const Task &));
 

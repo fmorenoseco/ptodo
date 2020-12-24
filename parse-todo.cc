@@ -9,14 +9,17 @@ using namespace std;
 
 #include "parse-todo.h"
 
+/*
 vector<string> allContexts;
 vector<string> allProjects;
+*/
 
 vector<Task> allTasks;
 
 extern int nline;
 extern void error(string msg);
 
+/* (comented out for future uses)
 // -------------------------------------------------------
 // manage contexts and projects
 // -------------------------------------------------------
@@ -35,6 +38,7 @@ void newProject(string c)
     
   allProjects.push_back(c);
 }
+*/
 
 //------------------------------------------
 //  read and process file 
@@ -146,12 +150,12 @@ void extractCPK(Task &t,string l)
     string d;
     if (word.length()>1 && word[0]=='@')
     {
-      newContext(word);
+      //newContext(word);
       t.contexts.push_back(word);
     }
     else if (word.length()>1 && word[0]=='+')
     {
-      newProject(word);
+      //newProject(word);
       t.projects.push_back(word);
     }
     else if (word.length()>1 && startsWith(word,0,"due:"))
