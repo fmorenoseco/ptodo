@@ -414,7 +414,7 @@ bool processFilter(string fline,FilterDPCP &f)
   unsigned il=0;
   string op;
 
-  f.days = 0;
+//  f.days = 0;  (bug 2020-12-28)
      
   while (nextWord(fline,il,op)) 
   {
